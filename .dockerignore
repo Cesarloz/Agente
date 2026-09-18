@@ -1,0 +1,17 @@
+.git
+.venv
+.env
+.env.*
+**/__pycache__
+**/*.egg-info
+**/.pytest_cache
+**/.ruff_cache
+pytest-cache-*
+.test-runs
+.test-tmp-*
+tmp-flow-review-*
+storage
+data
+tests
+docs
+*.log

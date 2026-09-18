@@ -1,0 +1,14 @@
+# Caddy installed on the Ubuntu host (not inside another container).
+# Replace this hostname with the real domain and match PUBLIC_BASE_URL in .env.
+# If API_PORT changes, update the loopback upstream port below.
+chat.example.com {
+	@agent_public path /chat/* /public/*
+	handle @agent_public {
+		reverse_proxy 127.0.0.1:8000
+	}
+
+	# Keep administration, API documentation and unrelated routes private.
+	handle {
+		respond "No encontrado" 404
+	}
+}

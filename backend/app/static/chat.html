@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Conversar con el agente</title>
+  <link rel="stylesheet" href="/public/assets/chat.css">
+  <script src="/public/assets/links.js" defer></script>
+  <script src="/public/assets/stream.js" defer></script>
+  <script src="/public/assets/chat.js" defer></script>
+</head>
+<body>
+  <main class="chat-shell">
+    <header class="agent-header">
+      <div class="identity">
+        <div id="avatar" class="avatar" aria-hidden="true">◈</div>
+        <div><p class="eyebrow">ASISTENTE VIRTUAL</p><h1 id="name">Conectando…</h1><p id="description" class="description"></p></div>
+      </div>
+      <button id="reset" class="secondary" type="button" disabled>Nueva conversación</button>
+    </header>
+    <nav id="agent-links" class="agent-links" aria-label="Enlaces del agente"></nav>
+    <section id="messages" class="messages" role="log" aria-label="Conversación" aria-live="polite" aria-relevant="additions text"></section>
+    <p id="status" class="status" role="status">Preparando tu conversación…</p>
+    <form id="chat-form" class="composer">
+      <label for="message">Tu mensaje</label>
+      <div class="input-row">
+        <textarea id="message" rows="2" maxlength="20000" placeholder="Escribe tu pregunta…" required disabled></textarea>
+        <button id="send" type="submit" disabled>Enviar <span aria-hidden="true">↗</span></button>
+      </div>
+      <p class="hint">Enter para enviar · Mayús + Enter para una nueva línea</p>
+    </form>
+    <footer>Conversación con un asistente de IA</footer>
+  </main>
+</body>
+</html>
